@@ -7,10 +7,11 @@ pipeline {
                 sh 'kubectl get all --namespace flask-space'
             }
         }
-	stage('Flask-deploy')}
-	    steps{
-		sh 'kubectl apply -f flask-deployment.yaml'
+        stage('Flask-deploy') {
+            steps {
+                sh 'kubectl apply -f flask-deployment.yaml'
+            }
+        }
     }
 }
-}
-}
+
